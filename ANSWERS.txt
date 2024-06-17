@@ -1,0 +1,32 @@
+1,
+SELECT year, COUNT(*) as count 
+FROM netflix_shows 
+GROUP BY year 
+ORDER BY count DESC 
+LIMIT 1;
+
+
+2,
+SELECT AVG(duration) as average_duration 
+FROM netflix_shows;
+
+
+3,
+Question: What are the top 5 countries producing the most content?
+
+SELECT country, COUNT(*) as count 
+FROM netflix_shows 
+GROUP BY country 
+ORDER BY count DESC 
+LIMIT 5;
+
+
+4,
+Question: What is the distribution of content ratings?
+
+SELECT rating, COUNT(*) as count 
+FROM netflix_shows 
+GROUP BY rating 
+ORDER BY count DESC;
+
+
